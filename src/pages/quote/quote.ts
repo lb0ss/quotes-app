@@ -15,7 +15,7 @@ export class QuotePage {
               private navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
+  ionViewWillEnter() {
     this.person = this.navParams.get('person');
     this.text = this.navParams.get('text');
   }

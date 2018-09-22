@@ -9,11 +9,12 @@ export class QuotesService {
     }
 
     removeQuoteFromFavorites(quote: Quote) {
-        const position = this.favoriteQuotes.findIndex((quoteEl: Quote)=>{
-            return quoteEl.id == quote.id;
+        const position = this.favoriteQuotes.findIndex((quoteEl: Quote) => {
+          return quoteEl.id == quote.id;
         });
         this.favoriteQuotes.splice(position, 1);
-    }
+      }
+      
     getFavoriteQuotes() {
         //Only creating a copy of the array, not deleting anything
         return this.favoriteQuotes.slice();
